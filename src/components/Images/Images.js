@@ -8,13 +8,15 @@ shuffle(images)
 class Images extends Component {
     render() {
         return (
-            <div class="container">
-            <div class="col">
+            <div className="container">
+            <div className="col">
               {images.map(image => (
                 <img
                     src={image.image}
+                    key={image.id}
                     id={image.id}
                     name={image.name}
+                    alt={image.name}
                     occupation={image.occupation}
                     location={image.location}>
                 </img>
