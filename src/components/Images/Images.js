@@ -27,6 +27,8 @@ class Images extends Component {
             console.log(this.state.clickedImages)
             console.log(this.state.topScore)
             console.log("You guessed incorrectly!")
+            shuffle(images)
+            this.forceUpdate()
             })
         } else {
             this.setState({
