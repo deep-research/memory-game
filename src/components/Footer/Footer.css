@@ -1,0 +1,13 @@
+.footer {
+    background-color: rgb(0, 85, 81);
+    opacity: .65;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+}
+
+.footer-padding {
+    background-color: rgba(0, 85, 81, 0.342);
+    height: 10px;
+    width: 100%;
+}
