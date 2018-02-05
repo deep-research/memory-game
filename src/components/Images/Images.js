@@ -6,6 +6,22 @@ import images from "../../images.json"
 shuffle(images)
 
 class Images extends Component {
+    state = {
+        clicks: 0
+    };
+
+    imgClick = (i) => {
+        this.setState({
+            clicks: this.state.clicks + 1
+        }, () => {
+        console.log(this.state)
+        })
+    }
+
+    componentDidMount() {
+        console.log(this.state)
+    }
+
     render() {
         return (
             <div className="container">
@@ -18,7 +34,8 @@ class Images extends Component {
                     name={image.name}
                     alt={image.name}
                     occupation={image.occupation}
-                    location={image.location}>
+                    location={image.location}
+                    onClick={() => this.imgClick(image.id)}>
                 </img>
               ))}
             </div>
