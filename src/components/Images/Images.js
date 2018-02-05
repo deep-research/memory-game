@@ -4,14 +4,13 @@ import shuffle from 'shuffle-array';
 import images from "../../images.json"
 import Navbar from "../Navbar";
 
-shuffle(images)
-
 class Images extends Component {
     state = {
         score: 0,
         clickedImages: [],
         topScore: 0,
-        message: "Click an image to begin!"
+        message: "Click an image to begin!",
+        images: shuffle(images)
     };
 
     imgClick = (id) => {
@@ -24,34 +23,19 @@ class Images extends Component {
             this.setState({
                 score: 0,
                 clickedImages: [],
-                message: "You guessed incorrectly!"
-            }, () => {
-            console.log("Score: " + this.state.score)
-            console.log("Top Score: " + this.state.topScore)
-            console.log("You guessed incorrectly!")
-            shuffle(images)
-            this.forceUpdate()
+                message: "You guessed incorrectly!",
+                images: shuffle(images)
             })
         } else {
             this.setState({
                 score: this.state.score + 1,
                 clickedImages: [...this.state.clickedImages, id],
-                message: "You guessed correctly!"
-            }, () => {
-            console.log("Score: " + this.state.score)
-            console.log("Top Score: " + this.state.topScore)
-            shuffle(images)
-            this.forceUpdate()
-            console.log("You guessed correctly!")
+                message: "You guessed correctly!",
+                images: shuffle(images)
             })
         }
     }
-
-    componentDidMount() {
-        console.log("Score: " + this.state.score)
-        console.log("Top Score: " + this.state.topScore)
-    }
-
+    
     render() {
         return (
             <div>
