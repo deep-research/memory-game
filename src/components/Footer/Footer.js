@@ -7,7 +7,7 @@ class Footer extends Component {
           <div>
             <div className="footer-padding"></div>
             <nav className="navbar navbar-expand-md navbar-dark footer">
-              <a className="navbar-brand" href="/">Memory Game</a>
+              <a className="navbar-brand" href=".">Memory Game</a>
             </nav>
           </div>
         );
