@@ -37,7 +37,7 @@
 * [Shuffle-array](https://www.npmjs.com/package/shuffle-array) - Randomize the order of the elements in an array.
 * [README-Template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) - A template to make good README.md.
 
-## Authors
+## Author
 
 * [Deep Research](https://github.com/deep-research)
 
