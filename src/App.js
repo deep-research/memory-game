@@ -8,6 +8,7 @@ import images from "./images.json";
 import Navbar from "./components/Navbar";
 
 class App extends Component {
+    // Keep track of the data
     state = {
         score: 0,
         topScore: 0,
@@ -16,25 +17,25 @@ class App extends Component {
         images: shuffle(images)
     };
 
+    // When an image is clicked...
     imgClick = (id) => {
+        // The game ends when an image is clicked twice
         if (this.state.clickedImages.includes(id)) {
-            // if (this.state.score > this.state.topScore) {
-            //     this.setState({
-            //         topScore: this.state.score
-            //     })
-            // }
             this.setState({
                 score: 0,
                 clickedImages: [],
                 message: "You guessed incorrectly!",
                 images: shuffle(images)
             })
+        // If an image is guessed successfully...
         } else {
+            // Update the topScore if it was beaten
             if (this.state.score + 1 > this.state.topScore) {
                 this.setState({
                     topScore: this.state.score + 1
                 })
             }
+            // Increment the score counter
             this.setState({
                 score: this.state.score + 1,
                 clickedImages: [...this.state.clickedImages, id],
@@ -44,6 +45,7 @@ class App extends Component {
         }
     }
 
+    // The main sections in the application are connected here
     render() {
         return (
             <div className="App">

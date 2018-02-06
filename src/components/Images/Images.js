@@ -9,6 +9,7 @@ class Images extends Component {
                 <div className="container">
                     <div className="col">
                     {images.map(image => (
+                        /* Data is passed to every image with props */
                         <img
                             src={image.image}
                             key={image.id}
@@ -17,7 +18,8 @@ class Images extends Component {
                             alt={image.name}
                             occupation={image.occupation}
                             location={image.location}
-                            onClick={() => this.props.imgClick(image.id)}>
+                            onClick={() => this.props.imgClick(image.id)
+                                /* Game function runs when clicked */}>
                         </img>
                     ))}
                     </div>
