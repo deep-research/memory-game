@@ -10,19 +10,19 @@ import Navbar from "./components/Navbar";
 class App extends Component {
     state = {
         score: 0,
-        clickedImages: [],
         topScore: 0,
+        clickedImages: [],
         message: "Click an image to begin!",
         images: shuffle(images)
     };
 
     imgClick = (id) => {
         if (this.state.clickedImages.includes(id)) {
-            if (this.state.score > this.state.topScore) {
-                this.setState({
-                    topScore: this.state.score
-                })
-            }
+            // if (this.state.score > this.state.topScore) {
+            //     this.setState({
+            //         topScore: this.state.score
+            //     })
+            // }
             this.setState({
                 score: 0,
                 clickedImages: [],
@@ -30,6 +30,11 @@ class App extends Component {
                 images: shuffle(images)
             })
         } else {
+            if (this.state.score + 1 > this.state.topScore) {
+                this.setState({
+                    topScore: this.state.score + 1
+                })
+            }
             this.setState({
                 score: this.state.score + 1,
                 clickedImages: [...this.state.clickedImages, id],
