@@ -45,8 +45,8 @@
 
 * React is great, but it takes a bit of getting used to. The key thing here was to understand that data should be passed from parent to child.
 * Topics for study:
+    * ES6 syntax
     * Connecting components together to create an organized file structure
     * Sending data through the file structure with props
-    * ES6 syntax, such as the map function
-    * setState() to keep track of changing data in the state object
-    * Lifecycle events such as componentDidMount()
+    * `setState()` to keep track of changing data in the state object
+    * Lifecycle events such as `componentDidMount()`
