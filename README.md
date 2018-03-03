@@ -19,8 +19,8 @@
 2. `yarn install` to prepare the necessary packages.
 3. `yarn build` to optimize the application.
 4. `npm install --save-dev babel-cli babel-preset-env` if you don't have Babel.JS working yet.
-4. `yarn start` to get it running.
-5. It will open in `localhost:3000`.
+5. `yarn start` to get it running.
+6. It will open in `localhost:3000`.
 
 ## Deployment
 
